@@ -1,0 +1,47 @@
+<div class="container">
+    <p class="title">My phone book!</p>
+    <hr>
+    <input type="text" class="search" placeholder="search text goes here" (input)="display()" [(ngModel)]="searchName" name="searchName">
+    <img src="assets/times-solid.svg" *ngIf="!visible" class="image" (click)="clear()">
+    <button class="add" (click)="add()" (click)="openModal(template)">add phone</button>
+
+    <ng-template #template>
+        <div class="modal-header">
+            <h4 class="modal-title pull-left">Add phone</h4>
+            <button class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <img src="assets/times-solid.svg" class="img" (click)="close()">
+            </button>
+        </div>
+        <div class="block">
+            <input type="text" id="fname" [(ngModel)]="newFName" placeholder="first name goes here">
+            <input type="text" id="lname" [(ngModel)]="newLName" placeholder="second name goes here">
+            <input type="text" id="number" [(ngModel)]="newNumber" placeholder="number phone goes here">
+        </div>
+        <button class="save" (click)="modalRef.hide()" (click)="save()">Save</button>
+    </ng-template>
+
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col" [class.active]="change === 'fname'" (click)="ischeck ? sort('fname') : sort()">First
+                    name <span [hidden]="ischeck">▼</span><span [hidden]="!ischeck">▲</span></th>
+                <th scope="col" [class.active]="change === 'lname'" (click)="ischeck1 ? sort1('lname') : sort1()">Last
+                    name <span [hidden]="ischeck1">▼</span><span [hidden]="!ischeck1">▲</span></th>
+                <th scope="col" [class.active]="change === 'number'" (click)="ischeck2 ? sort2('number') : sort2()">
+                    Number <span [hidden]="ischeck2">▼</span><span [hidden]="!ischeck2">▲</span></th>
+                <th scope="col">Edit</th>
+                <th scope="col">DELETE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let contact of bookList | search : searchName; index as i ">
+                <td>{{ contact.fname }}</td>
+                <td>{{ contact.lname }}</td>
+                <td>{{ contact.number }}</td>
+                <td><button class="edit" (click)="edit(i)" (click)="openModal(template)">edit</button></td>
+                <td><button class="delete" (click)="delete(i)">delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

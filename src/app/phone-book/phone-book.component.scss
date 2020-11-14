@@ -1,0 +1,188 @@
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 500;
+  color: crimson;
+  margin-bottom: 10px;
+}
+
+hr {
+  background-color: lightgray;
+  height: 1px;
+  border: none;
+}
+
+.search {
+  width: 84%;
+  height: 35px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 10px 10px 10px 0;
+  padding-left: 10px;
+}
+
+.search:focus {
+  outline: none;
+  box-shadow: 0 0 2px 3px rgb(101, 175, 255);
+}
+
+.add {
+  width: 15%;
+  height: 35px;
+  border: none;
+  color: #fff;
+  background-color: green;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add:hover {
+  background-color: darkgreen;
+}
+
+.add:focus {
+  outline: none;
+  box-shadow: 0 0 3px 3px green;
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+  border-spacing: 0;
+  text-align: center;
+}
+
+tr {
+  width: 100%;
+  height: 45px;
+  border-top: 1px solid #dee2e6;
+}
+
+.edit {
+  width: 50px;
+  height: 35px;
+  background-color: orange;
+  border: 1px solid orange;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.edit:focus {
+  outline: none;
+  border: 1px solid orange;
+  box-shadow: 0 0 3px 3px orange;
+}
+
+.delete {
+  text-align: center;
+  width: 70px;
+  height: 35px;
+  background-color: rgb(237, 52, 52);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.delete:focus {
+  outline: none;
+  border: 1px solid red;
+  box-shadow: 0 0 3px 3px red;
+}
+
+.bcolor {
+  background-color: rgb(228, 76, 76);
+}
+
+tr:hover {
+  background-color: lightgray;
+}
+
+.edit:hover {
+  background-color: darkgoldenrod;
+}
+
+.block {
+  width: 100%;
+  height: 155px;
+  background-color: #fff;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.block input {
+  width: 96%;
+  height: 40px;
+  margin: 5px 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.block input:focus {
+  outline: none;
+  box-shadow: 0 0 2px 3px rgb(101, 175, 255);
+}
+
+ng-template {
+  position: relative;
+}
+
+.save {
+  background-color: blue;
+  border-radius: 5px;
+  border: 1px solid blue;
+  height: 40px;
+  width: 60px;
+  color: white;
+  cursor: pointer;
+  margin: 10px 10px;
+  position: relative;
+  right: -420px;
+}
+
+.save:focus {
+  outline: none;
+  border: 1px solid blue;
+  box-shadow: 0 0 3px 3px blue;
+}
+
+.save:hover {
+  background-color: darkblue;
+}
+
+.img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.close:focus {
+  outline: none;
+}
+
+span {
+  visibility: hidden;
+}
+
+.active {
+  color: #000;
+
+  span {
+    visibility: visible;
+  }
+}
+
+.image {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 102px;
+  left: 1020px;
+  cursor: pointer;
+}
